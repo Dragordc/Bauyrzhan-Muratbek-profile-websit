@@ -1,8 +1,10 @@
 Hello everyone.This is my website.
-
-![1фото](https://user-images.githubusercontent.com/78695745/108632304-63042880-7498-11eb-8a7c-597e7c7ea3f3.PNG)<-------About me
-![2фото](https://user-images.githubusercontent.com/78695745/108632314-6bf4fa00-7498-11eb-95c6-ca9f9a78c505.PNG)<-------My skills
-![3фото](https://user-images.githubusercontent.com/78695745/108632316-6dbebd80-7498-11eb-964a-7fa0be44b097.PNG)<-------Contact me
+About me------->
+![1фото](https://user-images.githubusercontent.com/78695745/108632304-63042880-7498-11eb-8a7c-597e7c7ea3f3.PNG)
+My skills------->
+![2фото](https://user-images.githubusercontent.com/78695745/108632314-6bf4fa00-7498-11eb-95c6-ca9f9a78c505.PNG)
+Contact me------->
+![3фото](https://user-images.githubusercontent.com/78695745/108632316-6dbebd80-7498-11eb-964a-7fa0be44b097.PNG)
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>

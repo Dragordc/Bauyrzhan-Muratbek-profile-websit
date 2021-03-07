@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\BlogController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,9 +53,28 @@ Route::get('/update',function(){
 Route::get('/delete',function() {
 	$deleted=DB::delete('delete from posts where id = ?',[2]);
 	return $deleted;
+});*/
+/*Route::get('/blog/index',function () {
+	$results = DB::select('select*from posts');
+	foreach ($results as  $posts) {
+		echo "Title is: ".$posts->title;
+		echo "<br>";
+		echo "body is: ".$posts->body;
+		echo "<br>";
+	}
 });
-use App\Models\Post;
-Route::get('/read',function() {
+Route::get('/blog/create',function () {
+	DB::insert('insert into posts(title,body) values(?,?)',['Ыбырай Алтынсарин ','Ыбырай Алтынсарин агартушы.']);
+});*/
+
+Route::get('post', [BlogController::class, 'index']);
+Route::get('post/create', function(){
+     return view('post.create');
+});
+Route::post('post/create', [BlogController::class, 'store'])->name('add-post');
+
+
+/*Route::get('/read',function() {
 	$posts = Post::all();
 	foreach ($posts as $post) {
 		# code...
@@ -79,17 +101,23 @@ Route::get('/fund',function(){
 Route::get('/fand',function(){
 	$posts = Post::where('id',1)->value('body');
 	return $posts;
-});*/
+});
 Route::get('/post/create',function(){
 	$post = new Post;
 	$post->title='Abai Kunanbayev';
 	$post->body='Oiwyl';
-	$post->save();
+    $post->save();
 });
 Route::get('/post',function () {
 	$posts = Post::find(1);
 	return $posts;
 });
+Route::get('user/{name?}',function ($name  =  null) {
+    return $name;
+});
+*/
+
+
 
 
 

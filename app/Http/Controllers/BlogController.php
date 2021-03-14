@@ -93,4 +93,12 @@ class BlogController extends Controller
     {
         //
     }
+    public function get_client($id){
+         $posts = Post::find($id);
+         if($posts == null)
+            return response(['message'=>'client not found'],404);
+
+        return view('post.detail')->with(['posts'=>$posts]);
+
+    }
 }

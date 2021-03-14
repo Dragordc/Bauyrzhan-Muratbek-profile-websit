@@ -67,14 +67,13 @@ Route::get('/blog/create',function () {
 	DB::insert('insert into posts(title,body) values(?,?)',['Ыбырай Алтынсарин ','Ыбырай Алтынсарин агартушы.']);
 });*/
 
-Route::get('post', [BlogController::class, 'index']);
-Route::get('post/create', function(){
+Route::get('blog/index', [BlogController::class, 'index']);
+Route::get('blog/create', function(){
      return view('post.create');
 });
-Route::post('post/create', [BlogController::class, 'store'])->name('add-post');
+Route::post('blog/create', [BlogController::class, 'store'])->name('add-post');
 
-
-/*Route::get('/read',function() {
+Route::get('/read',function() {
 	$posts = Post::all();
 	foreach ($posts as $post) {
 		# code...
@@ -104,18 +103,19 @@ Route::get('/fand',function(){
 });
 Route::get('/post/create',function(){
 	$post = new Post;
-	$post->title='Abai Kunanbayev';
+	$post->title='Abai';
 	$post->body='Oiwyl';
     $post->save();
 });
 Route::get('/post',function () {
-	$posts = Post::find(1);
+	$posts = Post::find(3);
 	return $posts;
 });
 Route::get('user/{name?}',function ($name  =  null) {
     return $name;
 });
-*/
+Route::get('client/{id}',[BlogController::class,'get_client']);
+
 
 
 

@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BlogController;
 use App\Models\Post;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\LocalizationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,11 @@ Route::get('/skill',function(){
 Route::get('/contact',function(){
 	return view('contact');
 });
+Route::get('/{lang}',function ($lang){
+	App()->setLocale($lang);
+	return view('project');
+});
+Route::get('lang/{lang}', [LocalizationController::class, 'index']);
 
 
 /*Route::resource('posts','App\Http\Controllers\PostController');
@@ -115,7 +123,14 @@ Route::get('user/{name?}',function ($name  =  null) {
     return $name;
 });
 Route::get('client/{id}',[BlogController::class,'get_client']);
-
+Route::get('practice',function() {
+   return view('post.practice');
+});
+Route::get('form/create', function(){
+     return view('post.create');
+});
+Route::post('form/create', [BlogController::class, 'store'])->name('ad-post');
+Route::get('mail/send','MailController@send');
 
 
 

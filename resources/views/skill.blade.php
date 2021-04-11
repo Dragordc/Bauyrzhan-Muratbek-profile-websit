@@ -17,14 +17,16 @@
 	<link rel="stylesheet" href="{{asset('/portfolio.css')}}"/>
 </head>
 <body>
+	@extends('layout')
+	@section('content')
 	<div class="header"  id ="1" style="font-weight: bold;">
-		<p onclick="main()">About me</p>
-		<p onclick="skill()">My Skills</p>
-		<p onclick="contactme()">Contact me</p>
+		<p onclick="main()">{{__("About me")}}</p>{{__("")}}
+		<p onclick="skill()">{{__("My Skills")}}</p>
+		<p onclick="contactme()">{{__("Contact me")}}</p>
 	</div>
 	<div class="skills" id="2">
-		<h1>My coding skills</h1>
-		<p>As you know, programmers work with codes. And everyone has their own specific experience. These are my indicators of experience.</p>
+		<h1>{{__("My coding skills")}}</h1>
+		<p>{{__("As you know, programmers work with codes. And everyone has their own specific experience. These are my indicators of experience.")}}</p>
 		<div class="pokazatel" >
   <p>Java</p>
 <div class="progress">
@@ -44,5 +46,6 @@
 </div>
 </div>
 	</div>
+	@endsection
 </body>
 </html>

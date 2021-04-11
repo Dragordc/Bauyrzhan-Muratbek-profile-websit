@@ -19,24 +19,26 @@
 <link rel="stylesheet" href="{{asset('/project.css')}}"/>
 </head>
 <body>
+	@extends('languages')
+	@section('content')
 	<div class="header"  id ="1" style="font-weight: bold;">
-		<p onclick="main()">About me</p>
-		<p onclick="skill()">My Skills</p>
-		<p onclick="contactme()">Contact me</p>
+		<p onclick="main()">{{__("About me")}}</p>{{__("")}}
+		<p onclick="skill()">{{__("My Skills")}}</p>
+		<p onclick="contactme()">{{__("Contact me")}}</p>
 	</div>
 	<div class="center" >
 		<div class="photo">
 			<img src = "https://i.pinimg.com/564x/11/35/04/113504ad2534dea8116b007f8c47fdee.jpg">
 		</div>
 		<div class = "text">
-			<h1>Hello!</h1>
-			<p>I am a second year student of the SDU University. My profession is a programmer. To be more precise, it is "IS-information systems".</p>
-			<p>Besides study, I’m also fond of fishing because my father is a big fan of fishing. The only thing I don’t like is winter fishing, ice fishing that’s why I only fish in summer. I also like riding my bike and I try to use it no matter what weather it is outside and I’m very happy that there are bike lanes in the city now. I can also name one more hobby of mine and that is watching tv-series. I’ve recently watched a lot of interesting ones.</p>
+			<h1>{{__("Hello!")}}</h1>
+			<p>{{__("I am a second year student of the SDU University. My profession is a programmer. To be more precise, it is «IS-information systems».")}}</p>
+			<p>{{__("Besides study, I’m also fond of fishing because my father is a big fan of fishing. The only thing I don’t like is winter fishing, ice fishing that’s why I only fish in summer. I also like riding my bike and I try to use it no matter what weather it is outside and I’m very happy that there are bike lanes in the city now. I can also name one more hobby of mine and that is watching tv-series. I’ve recently watched a lot of interesting ones.")}}</p>
 		</div>
 	</div>
 	<div class="skills" id="2">
-		<h1>My coding skills</h1>
-		<p>As you know, programmers work with codes. And everyone has their own specific experience. These are my indicators of experience.</p>
+		<h1>{{__("My coding skills")}}</h1>
+		<p>{{__("As you know, programmers work with codes. And everyone has their own specific experience. These are my indicators of experience.")}}</p>
 		<div class="pokazatel" >
   <p>Java</p>
 <div class="progress">
@@ -60,7 +62,7 @@
 		<div class="belifon">
 		<div><img src="https://www.modlr.co/images/solutions/key-features/notification-support-01.png" alt="" width="200" style = "margin-top:80px;"></div>
 		<div class="oformlenie">
-			<h3 style="font-weight: bold;">Get in touch</h3>
+			<h3 style="font-weight: bold;">{{__("Get in touch")}}</h3>
 			<input type="text" placeholder="First Name">
 			<input type="text" placeholder="Last Name">
 			<input type="text" placeholder="Email">
@@ -86,5 +88,6 @@
 		document.querySelector(".contact").style.display = 'flex';
 	}
 </script>
+@endsection
 </body>
 </html>

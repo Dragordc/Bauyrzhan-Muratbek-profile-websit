@@ -17,16 +17,18 @@
 	<link rel="stylesheet" href="{{asset('/about.css')}}"/>
 </head>
 <body>
+	@extends('layout')
+	@section('content')
 	<div class="header"  id ="1" style="font-weight: bold;">
-		<p onclick="main()">About me</p>
-		<p onclick="skill()">My Skills</p>
-		<p onclick="contactme()">Contact me</p>
+		<p onclick="main()">{{__("About me")}}</p>{{__("")}}
+		<p onclick="skill()">{{__("My Skills")}}</p>
+		<p onclick="contactme()">{{__("Contact me")}}</p>
 	</div>
 		<div class="contact" id = "3">
 		<div class="belifon">
 		<div><img src="https://www.modlr.co/images/solutions/key-features/notification-support-01.png" alt="" width="200" style = "margin-top:80px;"></div>
 		<div class="oformlenie">
-			<h3 style="font-weight: bold;">Get in touch</h3>
+			<h3 style="font-weight: bold;">{{__("Get in touch")}}</h3>
 			<input type="text" placeholder="First Name">
 			<input type="text" placeholder="Last Name">
 			<input type="text" placeholder="Email">
@@ -35,5 +37,6 @@
 		</div>
 	</div>
 </div>
+@endsection
 </body>
 </html>

@@ -63,11 +63,11 @@
 		<div><img src="https://www.modlr.co/images/solutions/key-features/notification-support-01.png" alt="" width="200" style = "margin-top:80px;"></div>
 		<div class="oformlenie">
 			<h3 style="font-weight: bold;">{{__("Get in touch")}}</h3>
-			<input type="text" placeholder="First Name">
-			<input type="text" placeholder="Last Name">
-			<input type="text" placeholder="Email">
-			<textarea name="mess" id="" cols="32" rows="5" placeholder="Message"></textarea>
-			<input type="submit" value="Send">
+			<input type="text" value="{{__('First Name')}}">
+			<input type="text" value="{{__('Last Name')}}">
+			<input type="text" value="{{__('Email')}}">
+			<textarea name="mess" id="" cols="32" rows="5" value="{{__('Message')}}"></textarea>
+			<input type="submit" value="{{__('Send')}}">
 		</div>
 	</div>
 </div>
